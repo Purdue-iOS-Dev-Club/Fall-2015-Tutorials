@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bC-LZ-EL9">
+                                <rect key="frame" x="251" y="289" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7Z-zV-YGk">
+                                <rect key="frame" x="281" y="318" width="38" height="30"/>
+                                <state key="normal" title="Open"/>
+                                <connections>
+                                    <action selector="openButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="REg-ea-tmI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m7Z-zV-YGk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0qy-ky-dkg"/>
+                            <constraint firstItem="m7Z-zV-YGk" firstAttribute="top" secondItem="5bC-LZ-EL9" secondAttribute="bottom" constant="8" id="D3a-jX-4hr"/>
+                            <constraint firstItem="5bC-LZ-EL9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DyB-iF-HyR"/>
+                            <constraint firstItem="5bC-LZ-EL9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Xqq-v7-jWm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="exampleLabel" destination="5bC-LZ-EL9" id="WS5-fj-7k5"/>
+                        <segue destination="wg3-Tp-ZfZ" kind="presentation" identifier="goToDetail" modalTransitionStyle="flipHorizontal" id="ofY-S0-P86"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Dd9-ax-L1S">
+            <objects>
+                <viewController id="wg3-Tp-ZfZ" customClass="DetailViewController" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="70P-p2-MVI"/>
+                        <viewControllerLayoutGuide type="bottom" id="sgO-Oe-b8Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nAo-ij-JH3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIk-gD-EVq">
+                                <rect key="frame" x="281" y="285" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="wg3-Tp-ZfZ" eventType="touchUpInside" id="b8A-ym-FUZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JIk-gD-EVq" firstAttribute="centerY" secondItem="nAo-ij-JH3" secondAttribute="centerY" id="0CI-cZ-kI8"/>
+                            <constraint firstItem="JIk-gD-EVq" firstAttribute="centerX" secondItem="nAo-ij-JH3" secondAttribute="centerX" id="U2T-2U-eOw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l99-oI-zfs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1127" y="341"/>
+        </scene>
+    </scenes>
+</document>
